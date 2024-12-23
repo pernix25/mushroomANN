@@ -38,7 +38,7 @@ torch.manual_seed(42)
 model = ANN_model()
 
 # import dataset
-df = pd.read_csv('mushroom_data')
+df = pd.read_csv('mushroom_data.txt')
 
 # change label to 0,1
 df['label'] = df['label'].replace('p', 1)
@@ -80,7 +80,6 @@ learn_rate = 0.001
 optimizer = torch.optim.Adam(model.parameters(), lr=learn_rate)
 
 # train model
-
 epochs = 250
 losses = []
 
